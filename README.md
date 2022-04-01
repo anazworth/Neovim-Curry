@@ -9,6 +9,8 @@ feedback.
 I give much credit and thanks to [Christian Chiarulli](github.com/ChristianChiarulli) for his work
 on creating a wonderful Neovim base config to build upon.
 
+![Curry](screenshots/Curry.png)
+
 # Prerequisites
 - Make sure you have the latest version of [Neovim](https://github.com/neovim/neovim) installed.
 
