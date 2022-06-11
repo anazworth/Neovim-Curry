@@ -6,8 +6,6 @@ as LSP functionality and Github Copilot, which I use in my day-to-day work.
 Feel free to try it out for yourself or make suggestions, I'd love to hear
 feedback.
 
-I give much credit and thanks to [Christian Chiarulli](github.com/ChristianChiarulli) for his work
-on creating a wonderful Neovim base config to build upon.
 
 ![Curry](screenshots/Curry.png)
 
@@ -25,11 +23,11 @@ Run the following command in your terminal emulator to clone Neovim-Curry into y
 git clone https://github.com/anazworth/Neovim-Curry.git ~/.config/nvim
 ```
 
-In your terminal emulator, run 'nvim'. The plugins will automatically install.
+In your terminal emulator, run 'nvim'. Then, in nvim, type```:PlugInstall``` 
 
-If you do not have access to Github Copilot, you can go to "/lua/user/plugins.lua" and comment out
+If you do not have access to Github Copilot, you can go to "init.vim" and comment out
 ```
-use "github/copilot.vim"
+Plug "github/copilot.vim"
 ```
 
 ### Optional
@@ -49,12 +47,8 @@ pip install pynvim
 ### Theme
 
 I use [Nord theme](https://www.nordtheme.com).
-- To change the theme to your liking, replace the following line found in "lua/user/plugins.lua" with your favorite theme.
-```
-use "shaunsingh/nord.nvim"
-```
+- To change the theme to your liking, replace the following line found in "init.vim" with your favorite theme.
 
-- Then go to the "init.lua" file and change the following line to your theme's name.
 ```
-vim.cmd[[colorscheme *your theme name*]]
+colorscheme <your theme name>
 ```
