@@ -41,7 +41,7 @@ call plug#begin()
     Plug 'nvim-lualine/lualine.nvim'
     Plug 'kyazdani42/nvim-web-devicons'
 
-    Plug 'goolord/alpha.vim'
+    Plug 'goolord/alpha-nvim'
 
     Plug 'jiangmiao/auto-pairs'
 
@@ -66,6 +66,8 @@ colorscheme nord
 let mapleader = " "
 inoremap kj <Esc>
 cnoremap kj <Esc>
+nnoremap Z :w <CR>
+nnoremap ZZ :wq<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>c :Copilot panel<CR>
 " Telescope Remaps {
@@ -161,7 +163,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("p", "  Find project", ":Telescope projects <CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
+	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.vim <CR>"),
 	dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
 }
 
