@@ -58,14 +58,30 @@ call plug#begin()
     Plug 'hrsh7th/nvim-cmp'
     Plug 'L3MON4D3/LuaSnip'
     Plug 'saadparwaiz1/cmp_luasnip'
+    
+    " Telescope (fuzzy finder for files)
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+
+    " Vim-Fugitive (git integration)
+    Plug 'tpope/vim-fugitive'
 
     call plug#end()
 
 colorscheme nord
 
+" ----------------------------------------------------------------------------
+"  @Key Remaps
 let mapleader = " "
+inoremap kj <Esc>
+cnoremap kj <Esc>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>c :Copilot panel<CR>
+" Telescope Remaps
+nnoremap <leader>ff :Telescope find_files<CR>
+nnoremap <leader>fg :Telescope live_grep<CR>
+nnoremap <leader>fb :Telescope buffers<CR>
+nnoremap <leader>fh :Telescope help_tags<CR>
 
 " ----------------------------------------------------------------------------
 " @Lualine setup
