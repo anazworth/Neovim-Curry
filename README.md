@@ -25,30 +25,8 @@ git clone https://github.com/anazworth/Neovim-Curry.git ~/.config/nvim
 
 In your terminal emulator, run 'nvim'. Then, in nvim, type```:PlugInstall``` 
 
-If you do not have access to Github Copilot, you can go to "init.vim" and comment out
+If you do not have access to Github Copilot, you can go to "plugins.lua" and comment out
 ```
-Plug "github/copilot.vim"
-```
-
-### Optional
-
-- To enable Neovim node support
-
-```
-npm i -g neovim
+ "github/copilot.vim"
 ```
 
-- To enable Neovim python support
-
-```
-pip install pynvim
-```
-
-### Theme
-
-I use [Nord theme](https://www.nordtheme.com).
-- To change the theme to your liking, replace the following line found in "init.vim" with your favorite theme.
-
-```
-colorscheme <your theme name>
-```
