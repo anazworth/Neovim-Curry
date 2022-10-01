@@ -7,7 +7,7 @@ set shiftwidth=4
 set expandtab
 set smartindent
 set nu
-"set nowrap
+set nowrap
 set ignorecase
 set noswapfile
 set nobackup
@@ -32,8 +32,12 @@ set wildmenu
 
 call plug#begin()
 
-    Plug 'arcticicestudio/nord-vim'
+    Plug 'shaunsingh/nord.nvim'
     Plug 'overcache/NeoSolarized'
+    Plug 'folke/tokyonight.nvim'
+    Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'rebelot/kanagawa.nvim'
+    Plug 'dracula/vim'
 
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-surround'
@@ -61,7 +65,7 @@ call plug#begin()
 
     call plug#end()
 
-colorscheme nord
+colorscheme CurrySunrise
 
 " ----------------------------------------------------------------------------
 "  @Key Remaps
@@ -342,13 +346,39 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>" -----------------------------------------------------------------------------
 " Treesitter
-lua << TreesitterEnd
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = { "c", "lua", "java", "python", "rust", "javascript",
-    "typescript", "html", "css"},
+" lua << TreesitterEnd
+" require'nvim-treesitter.configs'.setup {
+"     -- A list of parser names, or "all"
 
-    highlight = {
-        enable = true,
-        },
-    }
-TreesitterEnd
+"     ensure_installed = { "c", "lua", "rust", "javascript", "java", "typescript", "vim", "yaml" },
+
+"   -- Install parsers synchronously (only applied to `ensure_installed`)
+"   sync_install = false,
+
+"   -- Automatically install missing parsers when entering buffer
+"   auto_install = true,
+
+"   -- List of parsers to ignore installing (for "all")
+"   ignore_install = {},
+
+"   ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+"   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+"   highlight = {
+"     -- `false` will disable the whole extension
+"     enable = true,
+
+"     -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
+"     -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
+"     -- the name of the parser)
+"     -- list of language that will be disabled
+"     disable = {},
+
+"     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+"     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+"     -- Using this option may slow down your editor, and you may see some duplicate highlights.
+"     -- Instead of true it can also be a list of languages
+"     additional_vim_regex_highlighting = false,
+"   },
+" }
+" TreesitterEnd
