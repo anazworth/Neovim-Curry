@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 local keymap = vim.keymap
 
-keymap.set("i", "kj", "<Esc>", {})
-keymap.set("c", "kj", "<Esc>", {})
+keymap.set("i", "kj", "<Esc><right>", {})
+keymap.set("c", "kj", "<Esc><right>", {})
 
 -- Increment and decrement numbers
 keymap.set("n", "+", "<C-a>", {})
