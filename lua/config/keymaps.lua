@@ -9,3 +9,7 @@ keymap.set("c", "kj", "<Esc><right>", {})
 -- Increment and decrement numbers
 keymap.set("n", "+", "<C-a>", {})
 keymap.set("n", "-", "<C-x>", {})
+
+-- Todo-Comments
+keymap.set("n", "<leader>tq", ":TodoQuickFix<CR>")
+keymap.set("n", "<leader>tt", ":TodoTelescope<CR>")
