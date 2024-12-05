@@ -13,6 +13,9 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.editor.mini-move" },
 		-- { import = "lazyvim.plugins.extras.coding.copilot" },
 		-- import any extras modules here
+		{ import = "lazyvim.plugins.extras.editor.harpoon2" },
+		{ import = "lazyvim.plugins.extras.editor.dial" },
+		{ import = "lazyvim.plugins.extras.editor.refactoring" },
 		-- { import = "lazyvim.plugins.extras.lang.typescript" },
 		-- { import = "lazyvim.plugins.extras.lang.json" },
 		-- { import = "lazyvim.plugins.extras.ui.mini-animate" },

@@ -1,7 +1,7 @@
 return {
 	{
 		"catppuccin/nvim",
-		lazy = true,
+		lazy = false,
 		name = "catppuccin",
 		opts = {
 			transparent_background = true,
@@ -23,10 +23,21 @@ return {
 		},
 	},
 	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+		opts = {
+			styles = {
+				transparency = true,
+			},
+		},
+	},
+	{
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {},
+		opts = {
+			transparent = true,
+		},
 	},
 	{
 		"LazyVim/LazyVim",
