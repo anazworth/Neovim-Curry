@@ -7,8 +7,18 @@ keymap.set("i", "kj", "<Esc><right>", {})
 keymap.set("c", "kj", "<Esc><right>", {})
 
 -- Increment and decrement numbers
-keymap.set("n", "+", "<C-a>", {})
-keymap.set("n", "-", "<C-x>", {})
+keymap.set("n", "+", function()
+	require("dial.map").manipulate("increment", "normal")
+end, {})
+keymap.set("n", "-", function()
+	require("dial.map").manipulate("decrement", "normal")
+end, {})
+keymap.set("v", "+", function()
+	require("dial.map").manipulate("increment", "visual")
+end, {})
+keymap.set("v", "-", function()
+	require("dial.map").manipulate("decrement", "visual")
+end, {})
 
 -- Todo-Comments
 keymap.set("n", "<leader>tq", ":TodoQuickFix<CR>")
